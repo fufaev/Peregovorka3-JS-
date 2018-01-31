@@ -1,53 +1,53 @@
 /**
  * @typedef {Object} Person
- * @property {String} login Идентификатор сотрудника.
- * @property {Number} floor "Домашний" этаж сотрудника.
- * @property {String} avatar Ссылка на аватар.
+ * @property {String} login РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃРѕС‚СЂСѓРґРЅРёРєР°.
+ * @property {Number} floor "Р”РѕРјР°С€РЅРёР№" СЌС‚Р°Р¶ СЃРѕС‚СЂСѓРґРЅРёРєР°.
+ * @property {String} avatar РЎСЃС‹Р»РєР° РЅР° Р°РІР°С‚Р°СЂ.
  */
 
 /**
  * @typedef {Object} Room
- * @property {Number} id Идентификатор переговорки.
- * @property {String} title Название переговорки.
- * @property {Number} capacity Вместимость (количество человек).
- * @property {Number} floor Этаж, на котором расположена переговорка.
+ * @property {Number} id РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРµСЂРµРіРѕРІРѕСЂРєРё.
+ * @property {String} title РќР°Р·РІР°РЅРёРµ РїРµСЂРµРіРѕРІРѕСЂРєРё.
+ * @property {Number} capacity Р’РјРµСЃС‚РёРјРѕСЃС‚СЊ (РєРѕР»РёС‡РµСЃС‚РІРѕ С‡РµР»РѕРІРµРє).
+ * @property {Number} floor Р­С‚Р°Р¶, РЅР° РєРѕС‚РѕСЂРѕРј СЂР°СЃРїРѕР»РѕР¶РµРЅР° РїРµСЂРµРіРѕРІРѕСЂРєР°.
  */
 
 /**
  * @typedef {Object} EventDate
- * @property {Number} start Timestamp начала встречи.
- * @property {Number} end Timestamp окончания встречи.
+ * @property {Number} start Timestamp РЅР°С‡Р°Р»Р° РІСЃС‚СЂРµС‡Рё.
+ * @property {Number} end Timestamp РѕРєРѕРЅС‡Р°РЅРёСЏ РІСЃС‚СЂРµС‡Рё.
  */
 
 /**
  * @typedef {Object} Event
- * @property {String} id Идентификатор встречи.
- * @property {String} title Название встречи.
- * @property {String[]} members Логины участников встречи.
- * @property {EventDate} date Дата и время проведения встречи.
- * @property {Number} room Идентификатор переговорки.
+ * @property {String} id РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІСЃС‚СЂРµС‡Рё.
+ * @property {String} title РќР°Р·РІР°РЅРёРµ РІСЃС‚СЂРµС‡Рё.
+ * @property {String[]} members Р›РѕРіРёРЅС‹ СѓС‡Р°СЃС‚РЅРёРєРѕРІ РІСЃС‚СЂРµС‡Рё.
+ * @property {EventDate} date Р”Р°С‚Р° Рё РІСЂРµРјСЏ РїСЂРѕРІРµРґРµРЅРёСЏ РІСЃС‚СЂРµС‡Рё.
+ * @property {Number} room РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРµСЂРµРіРѕРІРѕСЂРєРё.
  */
 
 /**
  * @typedef {Object} RoomsSwap
- * @property {string} event Идентификатор встречи.
- * @property {String} room Новый идентификатор переговорки.
+ * @property {string} event РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІСЃС‚СЂРµС‡Рё.
+ * @property {String} room РќРѕРІС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРµСЂРµРіРѕРІРѕСЂРєРё.
  */ 
 
 /**
  * @typedef {Object} Recommendation
- * @property {EventDate} date Дата и время проведения встречи.
- * @property {String} room Идентификатор переговорки.
- * @property {RoomsSwap[]} [swap] Необходимые замены переговорк для реализации рекомендации.
+ * @property {EventDate} date Р”Р°С‚Р° Рё РІСЂРµРјСЏ РїСЂРѕРІРµРґРµРЅРёСЏ РІСЃС‚СЂРµС‡Рё.
+ * @property {String} room РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРµСЂРµРіРѕРІРѕСЂРєРё.
+ * @property {RoomsSwap[]} [swap] РќРµРѕР±С…РѕРґРёРјС‹Рµ Р·Р°РјРµРЅС‹ РїРµСЂРµРіРѕРІРѕСЂРє РґР»СЏ СЂРµР°Р»РёР·Р°С†РёРё СЂРµРєРѕРјРµРЅРґР°С†РёРё.
  */
 
 /**
- * @param {EventDate} date Дата планируемой встречи.
- * @param {Person[]} members Участники планируемой встречи.
+ * @param {EventDate} date Р”Р°С‚Р° РїР»Р°РЅРёСЂСѓРµРјРѕР№ РІСЃС‚СЂРµС‡Рё.
+ * @param {Person[]} members РЈС‡Р°СЃС‚РЅРёРєРё РїР»Р°РЅРёСЂСѓРµРјРѕР№ РІСЃС‚СЂРµС‡Рё.
  * @param {Object} db 
- * @param {Event[]} db.events Список все встреч.
- * @param {Room[]} db.rooms Список всех переговорок.
- * @param {Person[]} db.persons Список всех сотрудников.
+ * @param {Event[]} db.events РЎРїРёСЃРѕРє РІСЃРµ РІСЃС‚СЂРµС‡.
+ * @param {Room[]} db.rooms РЎРїРёСЃРѕРє РІСЃРµС… РїРµСЂРµРіРѕРІРѕСЂРѕРє.
+ * @param {Person[]} db.persons РЎРїРёСЃРѕРє РІСЃРµС… СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ.
  * @returns {Recommendation[]}
  */
 function getRecommendation(date, members, db) {}
